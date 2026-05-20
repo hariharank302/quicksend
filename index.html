@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="P2P, WebRTC, peer-to-peer, no file size limit, end-to-end encryption, fast file sharing, browser-to-browser, direct downloads, open-source">
+    <meta name="description"
+        content="Fast, secure, open-source P2P sharing with WebRTC — send files of any size directly from your device, never stored online.">
+
+    <!-- Social Media Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fast P2P Sharing – Unlimited Size, Encrypted, Direct Downloads">
+    <meta property="og:description"
+        content="Fast, secure, open-source P2P sharing with WebRTC — send files instantly, no size limit, fully encrypted.">
+    <meta property="og:image" content="https://hariharank302.github.io/quicksend/images/quicksend.png">
+    <meta property="og:url" content="https://hariharank302.github.io/quicksend/">
+
+    <!-- Icons -->
+    <link rel="icon" href="assets/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/favicon.png">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' https:;
+    script-src 'self' https://unpkg.com;
+    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+    font-src https://cdnjs.cloudflare.com data:;">
+
+    <title>Fast P2P Sharing – Unlimited Size, Encrypted, Direct Downloads</title>
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="left">
+            <img src="assets/quicksend.png" alt="quicksend-logo" width="120" height="40" loading="lazy">
+            <p class="lead">Send files of any size directly from your device – never stored online.</p>
+            <ul class="features">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960"
+                        fill="#173660" aria-hidden="true">
+                        <path
+                            d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z" />
+                    </svg>
+                    <span>No file size limit</span>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960"
+                        fill="#173660" aria-hidden="true">
+                        <path
+                            d="M600-160q-134 0-227-93t-93-227q0-133 93-226.5T600-800q133 0 226.5 93.5T920-480q0 134-93.5 227T600-160Zm0-80q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm91-91 57-57-108-108v-144h-80v177l131 132ZM80-600v-80h160v80H80ZM40-440v-80h200v80H40Zm40 160v-80h160v80H80Zm520-200Z" />
+                    </svg>
+                    <span>Fast P2P File Sharing</span>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960"
+                        fill="#173660" aria-hidden="true">
+                        <path
+                            d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm0-80h480v-400H240v400Zm240-120q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z" />
+                    </svg>
+                    <span>End-to-end encryption</span>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -960 960 960"
+                        fill="#173660" aria-hidden="true">
+                        <path
+                            d="m720-120 160-160-56-56-64 64v-167h-80v167l-64-64-56 56 160 160ZM560 0v-80h320V0H560ZM240-160q-33 0-56.5-23.5T160-240v-560q0-33 23.5-56.5T240-880h280l240 240v121h-80v-81H480v-200H240v560h240v80H240Z" />
+                    </svg>
+                    <span>Direct downloads</span>
+                </li>
+            </ul>
+            <div id="dropZone" class="drop-zone" tabindex="0" role="button" aria-label="Select or drop a file">
+                <button id="selectBtn" class="btn" type="button">Select File</button>
+                <div id="fileInfo" class="meta" aria-live="polite"></div>
+                <input id="fileInput" type="file" hidden>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <label for="copylink">Copy link</label>
+            <div class="copy-container">
+                <input id="copylink" type="text" readonly placeholder="Your link">
+                <button class="copy-btn" type="button" aria-label="Copy link">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
+                        <path
+                            d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <label for="password">Password (optional)</label>
+            <input id="password" type="password" placeholder="Enter password">
+
+            <div style="display:flex;gap:8px;">
+                <button id="startBtn" class="btn btn-start" type="button" aria-describedby="log">Start</button>
+                <button id="cancelBtn" class="btn btn-cancel" type="button">Cancel</button>
+            </div>
+
+            <p class="meta">Open the generated link – the receiver will connect and download.</p>
+            <div class="log" id="log" aria-live="polite">Demo version – real P2P transfers coming soon with WebRTC
+                signaling and DataChannel support.</div>
+        </aside>
+    </main>
+
+    <footer>
+        <p class="footer-recaptcha-notice">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            and
+            <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            apply.
+        </p>
+        <div class="footer-legal">&copy; 2025 QuickSend. All rights reserved.</div>
+    </footer>
+
+    <script src="https://unpkg.com/simple-peer@9.11.1/simplepeer.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
